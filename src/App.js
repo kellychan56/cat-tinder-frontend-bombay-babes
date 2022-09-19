@@ -7,19 +7,22 @@ import FinalFantasyShow from './pages/FinalFantasyShow';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
 import { Routes, Route } from "react-router-dom";
+import characters from './mockFinalFantasy';
 
 
 function App() {
   return (
   <>
    <Header />
-   <Footer />
-   <FinalFantasyEdit />
-   <FinalFantasyIndex />
-   <FinalFantasyNew />
-   <FinalFantasyShow />
-   <Home />
-   <NotFound />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/finalfantasyindex" element={<FinalFantasyIndex />} />
+      <Route path="/finalfantasyshow" element={<FinalFantasyShow />} />
+      <Route path="/finalfantasynew" element={<FinalFantasyNew />} />
+      <Route path="/finalfantasyedit" element={<FinalFantasyEdit />} />
+      <Route path="/*" element={<NotFound />} />
+    </Routes>
+    <Footer />
    </> 
    );
 }
