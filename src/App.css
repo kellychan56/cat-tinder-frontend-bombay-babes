@@ -1,38 +1,30 @@
-.App {
-  text-align: center;
+@import url(//db.onlinewebfonts.com/c/d8acf9862ec2f2245c7885adf14f1e7c?family=Runic+MT+Condensed);
+@font-face {
+  font-family: "Runic MT Condensed";
+  src: url("//db.onlinewebfonts.com/t/d8acf9862ec2f2245c7885adf14f1e7c.eot");
+  src: url("//db.onlinewebfonts.com/t/d8acf9862ec2f2245c7885adf14f1e7c.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/d8acf9862ec2f2245c7885adf14f1e7c.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/d8acf9862ec2f2245c7885adf14f1e7c.woff") format("woff"), url("//db.onlinewebfonts.com/t/d8acf9862ec2f2245c7885adf14f1e7c.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/d8acf9862ec2f2245c7885adf14f1e7c.svg#Runic MT Condensed") format("svg");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.footer {
+  background-color: rgb(53, 63, 137);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  background-color: rgb(53, 63, 137);
+  font-family: "Runic MT Condensed" ;
+  font-size: 3rem;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.nav-items {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* .nav {
+  color: white;
+  font-family: "Runic MT Condensed" ;
+  font-size: 4rem;
+} */

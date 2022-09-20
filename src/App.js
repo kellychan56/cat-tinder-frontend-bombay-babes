@@ -8,6 +8,8 @@ import Home from './pages/Home';
 import NotFound from './pages/NotFound';
 import { Routes, Route } from "react-router-dom";
 import characters from './mockFinalFantasy';
+import './App.css'
+
 
 
 function App() {
@@ -23,7 +25,7 @@ function App() {
       <Route path="/*" element={<NotFound />} />
     </Routes>
     <Footer />
-   </> 
+   </>
    );
 }
 
