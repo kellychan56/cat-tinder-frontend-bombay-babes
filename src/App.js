@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import Header from './components/Header';
 import Footer from './components/Footer';
 import FinalFantasyEdit from './pages/FinalFantasyEdit';
@@ -12,14 +13,17 @@ import './App.css'
 
 
 
-function App() {
+const App = () => {
+
+  const [charProfile, setCharProfile] =  useState(characters)
+
   return (
   <>
    <Header />
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/finalfantasyindex" element={<FinalFantasyIndex />} />
-      <Route path="/finalfantasyshow" element={<FinalFantasyShow />} />
+      <Route path="/finalfantasyindex" element={<FinalFantasyIndex charProfile={charProfile}/>} />
+      <Route path="/finalfantasyshow/:id" element={<FinalFantasyShow charProfile={charProfile}/>} />
       <Route path="/finalfantasynew" element={<FinalFantasyNew />} />
       <Route path="/finalfantasyedit" element={<FinalFantasyEdit />} />
       <Route path="/*" element={<NotFound />} />
