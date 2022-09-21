@@ -28,3 +28,10 @@
   font-family: "Runic MT Condensed" ;
   font-size: 4rem;
 } */
+
+
+.my-2{
+  width: 400px;
+  height: 600px;
+  margin: 0 auto;
+}
