@@ -13,15 +13,15 @@ const Header = () => {
       <Navbar >
         <Nav>
           <NavItem>
-            <NavLink href="/"><div className='nav-items'>FINAL FANTASY TINDER</div></NavLink>
+            <NavLink href="/"><div className='nav-logo'>FINAL FANTASY TINDER</div></NavLink>
           </NavItem>
         </Nav>
         <Nav className="navbar" >
           <NavItem>
-            <NavLink href="/finalfantasyindex"><div className='nav-items'>Index</div></NavLink>
+            <NavLink href="/finalfantasyindex"><div className='nav-items'>All Profiles</div></NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/finalfantasynew"><div className='nav-items'>New</div></NavLink>
+            <NavLink href="/finalfantasynew"><div className='nav-items'>Create New Profile</div></NavLink>
           </NavItem>
         </Nav>
       </Navbar>

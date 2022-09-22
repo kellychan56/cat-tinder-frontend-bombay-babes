@@ -13,10 +13,10 @@ const renderComponent = () => {
         </Routes>
       </MemoryRouter>
     )
-  } 
-  describe('FinalFantasyShow', () => { 
+  }
+  describe('FinalFantasyShow', () => {
       test("render a card with a characters interest", ()=>{
         renderComponent()
-        expect(screen.getByText(characters[0].interests)).toBeInTheDocument()
+        expect(screen.getByText(`Interests: ${characters[0].interests}`)).toBeInTheDocument()
       })
-   })
+  })

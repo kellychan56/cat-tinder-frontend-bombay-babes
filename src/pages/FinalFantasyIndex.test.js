@@ -17,11 +17,11 @@ describe("<FinalFantasyIndex/>", () => {
         })
     })
     it("FinalFantasyIndex has an image with src and alt attributes", () => {
-       render(
+        render(
         <BrowserRouter>
-         <FinalFantasyIndex charProfile={ characters }/>
+            <FinalFantasyIndex charProfile={ characters }/>
         </BrowserRouter>)
-        
+
         characters.forEach(character => {
             const img = screen.getAllByRole("img")
 

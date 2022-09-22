@@ -9,7 +9,8 @@ const FinalFantasyShow = ({charProfile}) => {
 
   return (
     <>
-    <Card className="my-2">
+    <div className='character-card'>
+    <Card className="character-card-content">
       <CardImg
         alt={character.image_alt}
         src={character.image}
@@ -19,10 +20,11 @@ const FinalFantasyShow = ({charProfile}) => {
           {character.name}, {character.age}
         </CardTitle>
         <CardText>
-          {character.interests}
+          Interests: {character.interests}
         </CardText>
       </CardBody>
     </Card>
+    </div>
     </>
   )
 }
