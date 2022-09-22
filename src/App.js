@@ -17,20 +17,24 @@ const App = () => {
 
   const [charProfile, setCharProfile] =  useState(characters)
 
+  const createChar = (char) => {
+    console.log("Created a new character profile", char)
+  }
+
   return (
-  <>
-   <Header />
+  <main>
+    <Header />
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/finalfantasyindex" element={<FinalFantasyIndex charProfile={charProfile}/>} />
       <Route path="/finalfantasyshow/:id" element={<FinalFantasyShow charProfile={charProfile}/>} />
-      <Route path="/finalfantasynew" element={<FinalFantasyNew />} />
+      <Route path="/finalfantasynew" element={<FinalFantasyNew createChar={createChar}/>} />
       <Route path="/finalfantasyedit" element={<FinalFantasyEdit />} />
       <Route path="/*" element={<NotFound />} />
     </Routes>
     <Footer />
-   </>
-   );
+  </main>
+  );
 }
 
 export default App;
