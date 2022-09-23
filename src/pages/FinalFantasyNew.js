@@ -90,7 +90,7 @@ const FinalFantasyNew = ({createChar}) => {
               value={newChar.image_alt}
             />
           </FormGroup>
-          <NavLink to={`/finalfantasyindex/`} className="nav-link">
+          <NavLink to={`/finalfantasyindex`} className="nav-link">
             <Button
               onClick={handleSubmit}
               name="submit"

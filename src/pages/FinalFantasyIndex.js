@@ -12,6 +12,7 @@ const FinalFantasyIndex = ({charProfile}) => {
               style={{
                 width: '18rem'
               }}
+              className='character-card-index'
             >
               <img
                 src={ character.image }
