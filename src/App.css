@@ -5,36 +5,43 @@
   src: url("//db.onlinewebfonts.com/t/d8acf9862ec2f2245c7885adf14f1e7c.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/d8acf9862ec2f2245c7885adf14f1e7c.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/d8acf9862ec2f2245c7885adf14f1e7c.woff") format("woff"), url("//db.onlinewebfonts.com/t/d8acf9862ec2f2245c7885adf14f1e7c.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/d8acf9862ec2f2245c7885adf14f1e7c.svg#Runic MT Condensed") format("svg");
 }
 
-.character-card {
-  padding: 20px;
-}
-
 main{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
+.character-card {
+  padding: 20px;
+}
+
 .character-card-content {
   width: 400px;
   height: 600px;
   margin: 0 auto;
+  box-shadow: 5px 5px 9px 4px gray;
+}
+
+.character-card-index {
+  box-shadow: 5px 5px 9px 4px gray;
+
 }
 
 .footer {
-  background-color: rgb(53, 63, 137);
+  background-image: linear-gradient(white, rgba(10,116,193));
   margin-top: auto;
 }
 
 .footer-developers {
   font-family: "Runic MT Condensed" ;
   font-size: 2.5rem;
-  color: white;
+  color: black;
+  text-shadow: -0.3px 0 white, 0 0.3px white, 0.3px 0 white, 0 -0.3px white;
   text-align: center;
 }
 
 .header {
-  background-color: rgb(53, 63, 137);
+  background-image: linear-gradient(rgba(10,116,193), white);
   font-family: "Runic MT Condensed" ;
   font-size: 3rem;
 }
@@ -77,4 +84,8 @@ main{
 
 p {
   margin-bottom: 0 !important;
+}
+
+.tinder-text {
+  font-family: "Runic MT Condensed" ;
 }
