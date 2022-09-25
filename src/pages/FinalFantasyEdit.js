@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap'
 import { NavLink, useParams } from 'react-router-dom'
 
-const FinalFantasyEdit = ({charProfile, updateChar}) => {
+const FinalFantasyEdit = ({charProfile, updateChar, deleteChar}) => {
   const { id } = useParams()
   const character = charProfile?.find(character => character.id === +id)
 
@@ -14,6 +14,11 @@ const FinalFantasyEdit = ({charProfile, updateChar}) => {
 
   const handleUpdate = () => {
     updateChar(currentChar, id)
+    console.log(currentChar)
+  }
+
+  const handleDelete = () => {
+    deleteChar(id)
     console.log(currentChar)
   }
 
@@ -93,6 +98,14 @@ const FinalFantasyEdit = ({charProfile, updateChar}) => {
               onClick={handleUpdate}
             >
               Submit
+            </Button>
+          </NavLink>
+          <NavLink to={'/finalfantasyindex'} className="nav-link">
+            <Button
+              name="submit"
+              onClick={handleDelete}
+            >
+              Delete Profile
             </Button>
           </NavLink>
         </Form>
