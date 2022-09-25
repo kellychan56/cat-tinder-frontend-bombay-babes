@@ -64,6 +64,7 @@ const App = () => {
     .then(response => response.json())
     .then(payload => readChar())
     .catch(error => console.log("Character delete error:", error))
+    .finally(() => readChar())
   }
 
   return (

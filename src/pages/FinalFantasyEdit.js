@@ -100,7 +100,7 @@ const FinalFantasyEdit = ({charProfile, updateChar, deleteChar}) => {
               Submit
             </Button>
           </NavLink>
-          <NavLink to={'/finalfantasyindex'} className="nav-link">
+          <NavLink to={`/finalfantasyindex`} className="nav-link">
             <Button
               name="submit"
               onClick={handleDelete}
