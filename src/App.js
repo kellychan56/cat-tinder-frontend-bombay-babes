@@ -41,16 +41,29 @@ const App = () => {
     .catch(error => console.log("Character create error:", error))
   }
 
+  const updateChar = (char, id) => {
+    fetch(`http://localhost:3000/characters/${id}`, {
+      body: JSON.stringify(char),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "PATCH"
+    })
+    .then(response => response.json())
+    .then(payload => readChar())
+    .catch(error => console.log("Character update error:", error))
+  }
+
 
   return (
   <main>
     <Header />
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/finalfantasyindex" element={<FinalFantasyIndex charProfile={charProfile}/>} />
-      <Route path="/finalfantasyshow/:id" element={<FinalFantasyShow charProfile={charProfile}/>} />
-      <Route path="/finalfantasynew" element={<FinalFantasyNew createChar={createChar}/>} />
-      <Route path="/finalfantasyedit" element={<FinalFantasyEdit />} />
+      <Route path="/finalfantasyindex" element={<FinalFantasyIndex charProfile={charProfile} />} />
+      <Route path="/finalfantasyshow/:id" element={<FinalFantasyShow charProfile={charProfile} />} />
+      <Route path="/finalfantasynew" element={<FinalFantasyNew createChar={createChar} />} />
+      <Route path="/finalfantasyedit/:id" element={<FinalFantasyEdit charProfile={charProfile} updateChar={updateChar} />} />
       <Route path="/*" element={<NotFound />} />
     </Routes>
     <Footer />

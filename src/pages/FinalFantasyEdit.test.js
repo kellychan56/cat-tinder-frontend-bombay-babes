@@ -1,24 +1,24 @@
 import { screen, render } from '@testing-library/react'
-import FinalFantasyNew from './FinalFantasyNew'
+import FinalFantasyEdit from './FinalFantasyEdit'
 import { BrowserRouter } from 'react-router-dom'
 
 
-describe("<FinalFantasyNew/>", () => {
-    it("FinalFantasyNew renders without error", () => {
+describe("<FinalFantasyEdit/>", () => {
+    it("FinalFantasyEdit renders without error", () => {
         render(
             <BrowserRouter>
-                <FinalFantasyNew/>
+                <FinalFantasyEdit/>
             </BrowserRouter>
             )
 
-        const heading = screen.getByRole("heading", {name: /Add a New Profile/i})
+        const heading = screen.getByRole("heading", {name: /Edit/i})
 
         expect(heading).toBeInTheDocument()
     })
     it("form has input fields", () => {
         render(
             <BrowserRouter>
-                <FinalFantasyNew/>
+                <FinalFantasyEdit/>
             </BrowserRouter>        )
 
         const textbox = screen.getAllByRole("textbox")

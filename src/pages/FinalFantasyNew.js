@@ -13,16 +13,16 @@ const FinalFantasyNew = ({createChar}) => {
 
   const handleChar = (e) => {
     setNewChar({...newChar, [e.target.name]: e.target.value})
-    console.log(newChar)
   }
 
   const handleSubmit = () => {
     createChar(newChar)
+    console.log(newChar)
   }
 
   return (
     <>
-      <div className='new-form'>
+      <div className='form'>
         <h2>Add a New Profile</h2>
         <Form>
           <FormGroup>

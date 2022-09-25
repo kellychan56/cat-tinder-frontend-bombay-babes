@@ -40,6 +40,12 @@ main{
   text-align: center;
 }
 
+.form {
+  width: 30%;
+  padding: 20px;
+  margin: 0 auto;
+}
+
 .header {
   background-image: linear-gradient(rgba(10,116,193), white);
   font-family: "Runic MT Condensed" ;
@@ -74,12 +80,6 @@ main{
   text-shadow: -0.6px 0 white, 0 0.6px white, 0.6px 0 white, 0 -0.6px white;
   font-weight: bold;
 
-}
-
-.new-form {
-  width: 30%;
-  padding: 20px;
-  margin: 0 auto;
 }
 
 p {
