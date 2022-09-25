@@ -1,14 +1,17 @@
 import { screen, render } from '@testing-library/react'
 import FinalFantasyEdit from './FinalFantasyEdit'
-import { BrowserRouter } from 'react-router-dom'
+import { MemoryRouter, Route, Routes } from "react-router-dom"
+import characters from '../mockFinalFantasy'
 
 
 describe("<FinalFantasyEdit/>", () => {
     it("FinalFantasyEdit renders without error", () => {
         render(
-            <BrowserRouter>
-                <FinalFantasyEdit/>
-            </BrowserRouter>
+            <MemoryRouter initialEntries={["/finalfantasyedit/1"]}>
+                <Routes>
+                    <Route path="/finalfantasyedit/:id" element={<FinalFantasyEdit charProfile={ characters }/>} />
+                </Routes>
+            </MemoryRouter>
             )
 
         const heading = screen.getByRole("heading", {name: /Edit/i})
@@ -17,9 +20,12 @@ describe("<FinalFantasyEdit/>", () => {
     })
     it("form has input fields", () => {
         render(
-            <BrowserRouter>
-                <FinalFantasyEdit/>
-            </BrowserRouter>        )
+            <MemoryRouter initialEntries={["/finalfantasyedit/1"]}>
+                <Routes>
+                    <Route path="/finalfantasyedit/:id" element={<FinalFantasyEdit charProfile={ characters }/>} />
+                </Routes>
+            </MemoryRouter>
+            )
 
         const textbox = screen.getAllByRole("textbox")
 

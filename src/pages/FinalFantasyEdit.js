@@ -12,7 +12,7 @@ const FinalFantasyEdit = ({charProfile, updateChar}) => {
     setCurrentChar({...currentChar, [e.target.name]: e.target.value})
   }
 
-  const handleSubmit = () => {
+  const handleUpdate = () => {
     updateChar(currentChar, id)
     console.log(currentChar)
   }
@@ -90,7 +90,7 @@ const FinalFantasyEdit = ({charProfile, updateChar}) => {
           <NavLink to={`/finalfantasyshow/${character.id}`} className="nav-link">
             <Button
               name="submit"
-              onClick={handleSubmit}
+              onClick={handleUpdate}
             >
               Submit
             </Button>
