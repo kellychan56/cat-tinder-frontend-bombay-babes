@@ -5,8 +5,7 @@ const Home = () => {
   return (
     <>
       <div className="home">
-        <p>Home</p>
-        <img id="home-img" src={ffLogo} alt="Final FantasyLogo"></img>
+        <img className="home-img" src={ffLogo} alt="Final Fantasy Logo"></img>
       </div>
     </>
   )
