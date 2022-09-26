@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { Form, FormGroup, Label, Input, Button } from 'reactstrap'
+import { CardImg, Form, FormGroup, Label, Input, Button } from 'reactstrap'
 import { NavLink, useParams } from 'react-router-dom'
+import DeleteConfirmation from '../components/DeleteConfirmation'
 
 const FinalFantasyEdit = ({charProfile, updateChar, deleteChar}) => {
   const { id } = useParams()
@@ -23,9 +24,14 @@ const FinalFantasyEdit = ({charProfile, updateChar, deleteChar}) => {
   }
 
   return (
-    <>
+    <div className='form-body'>
       <div className='form'>
         <h2>Edit {character.name}'s Profile</h2>
+        <CardImg
+          className='card-edit-img'
+          alt={character.image_alt}
+          src={character.image}
+        />
         <Form>
           <FormGroup>
             <Label for="name">
@@ -92,25 +98,28 @@ const FinalFantasyEdit = ({charProfile, updateChar, deleteChar}) => {
               value={currentChar.image_alt}
             />
           </FormGroup>
-          <NavLink to={`/finalfantasyshow/${character.id}`} className="nav-link">
-            <Button
-              name="submit"
-              onClick={handleUpdate}
-            >
-              Submit
-            </Button>
-          </NavLink>
-          <NavLink to={`/finalfantasyindex`} className="nav-link">
-            <Button
-              name="submit"
-              onClick={handleDelete}
-            >
-              Delete Profile
-            </Button>
-          </NavLink>
+          <div className='button-container'>
+            <NavLink to={`/finalfantasyshow/${character.id}`} className="nav-link">
+              <Button
+                name="submit"
+                onClick={handleUpdate}
+              >
+                Submit
+              </Button>
+            </NavLink>
+            {/* <NavLink to={`/finalfantasyindex`} className="nav-link"> */}
+            <DeleteConfirmation handleDelete={handleDelete}/>
+              {/* <Button
+                name="submit"
+                onClick={handleShow}
+              >
+                Delete Profile
+              </Button> */}
+            {/* </NavLink> */}
+          </div>
         </Form>
       </div>
-    </>
+    </div>
   )
 }
 
