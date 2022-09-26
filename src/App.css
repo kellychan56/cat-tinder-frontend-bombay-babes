@@ -71,7 +71,16 @@ main{
   width: 30%;
   padding: 20px;
   margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
   font-family: "Philosopher";
+  background-color: rgba(255, 255, 255, 0.689);
+}
+
+.form-body {
+  background-image: url(https://www.wallpapertip.com/wmimgs/5-54219_fantasy-landscapes-cities-art-magic-wallpaper-fantasy-desktop.jpg);
+  background-size: cover;
+  min-height: 100vh;
 }
 
 .header {
@@ -83,6 +92,11 @@ main{
 .home {
   display: flex;
   justify-content: center;
+}
+
+.home-button {
+  margin: 0 auto;
+  font-family: "Runic MT Condensed";
 }
 
 .home-img {
@@ -129,11 +143,25 @@ main{
 
 }
 
+.notfound-img {
+  height: 25%;
+  width: 25%;
+  margin: 0 auto;
+}
+
+.notfound-text{
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Philosopher";
+}
+
 p {
   margin-bottom: 0 !important;
 }
 
 .show-body {
+  min-height: 100vh;
+  background-repeat: no-repeat;
   background-image: url(https://rare-gallery.com/uploads/posts/4567868-digital-art-final-fantasy-xv-altissia-fantasy-art-waterfall-final-fantasy.jpg);
 }
 
