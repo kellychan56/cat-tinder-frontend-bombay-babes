@@ -22,14 +22,14 @@ const App = () => {
   }, [])
 
   const readChar = () => {
-    fetch("http://localhost:3000/characters")
+    fetch("https://ff-tinder-backend.herokuapp.com/characters")
     .then(response => response.json())
     .then(payload => setCharProfile(payload))
     .catch(error => console.log(error))
   }
 
   const createChar = (char) => {
-    fetch("http://localhost:3000/characters", {
+    fetch("https://ff-tinder-backend.herokuapp.com/characters", {
       body: JSON.stringify(char),
       headers: {
         "Content-Type": "application/json"
@@ -42,7 +42,7 @@ const App = () => {
   }
 
   const updateChar = (char, id) => {
-    fetch(`http://localhost:3000/characters/${id}`, {
+    fetch(`https://ff-tinder-backend.herokuapp.com/characters/${id}`, {
       body: JSON.stringify(char),
       headers: {
         "Content-Type": "application/json"
@@ -55,7 +55,7 @@ const App = () => {
   }
 
   const deleteChar = (id) => {
-    fetch(`http://localhost:3000/characters/${id}`, {
+    fetch(`https://ff-tinder-backend.herokuapp.com/characters/${id}`, {
       headers: {
         "Content-Type": "application/json"
       },
